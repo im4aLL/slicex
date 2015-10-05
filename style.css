@@ -1,0 +1,17 @@
+/* CSS reset <use proper reset, this is for demo purpose> */
+*                               { margin: 0; padding: 0; }
+html                            { box-sizing: border-box; }
+*, *:before, *:after            { box-sizing: inherit; }
+
+
+/* slicex */
+.slicex                         { width: 700px; height: 300px; margin: 100px auto; position: relative; } /* adjust as per your need */
+.slicex-slide                   { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+.slicex-slide img               { display: none; position: absolute; left: 0; top: 0 }
+.slicex-slide *                 { animation-play-state: paused !important; }
+.slicex-slide.is-played *       { animation-play-state: running !important; }
+.slicex-tiles:after             { content: ""; display: block; clear: both; }
+.slicex-tile                    { float: left; opacity: 0; position: relative; }
+.slicex-tile-inner              { content: ""; display: block; position: absolute; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.8); animation: fadeIn 400ms both reverse; }
+.fadeIn                         { animation: fadeIn 400ms both; }
+@keyframes fadeIn               { 0% { opacity: 0; } 100% { opacity: 1; } }
